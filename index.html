@@ -5,9 +5,72 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="index.js"></script>
+    <style>
+        body{
+            background: #9000c4;
+            background: linear-gradient(317deg,rgba(144, 0, 196, 0.95) 0%, rgba(0, 212, 255, 0.95) 100%);
+        }
+        h1{
+            font-size: 50px;
+            margin-bottom: 20px;
+        }
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+            margin-top: 40px;
+            padding: 10px;
+        }
+        .main{
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        button{
+            height: 50px;
+            width: 150px;
+            padding: 10px 20px;
+            font-size: 20px;
+            cursor: pointer;
+            transition: all 0.2s ease-in-out;
+        }
+        button:hover{
+            background-color: skyblue;
+            color: white;
+            height: 75px;
+            width: 185px;
+            font-size: 25px;
+            transition: all 0.2s ease-in-out;
+        }
+        .heading{
+            height: 100px;
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+            padding-left: 20px;
+            padding-right: 20px;
+            border: 2px solid black;
+        }
+    </style>
 </head>
 <body>
-    <h1>Let's play Rock Paper Scissors</h1>
-    <button onclick="location.reload()">Play again?</button>
-</body>
+    <div class="main">
+        <div class="heading">
+            <h1>Let's play Rock Paper Scissors</h1>
+        </div>
+        <button onclick="startGame()">Play Now!</button>
+        <table id="scoreTable">
+            <thead>
+                <tr>
+                    <th>Rounds</th>
+                    <th>Your Choice</th>
+                    <th>Computer Choice</th>
+                    <th>Result</th>
+                </tr>
+            </thead>
+            <tbody id="historyBody">
+            </tbody>
+        </table>
+    </div>
+    </body>
 </html>
